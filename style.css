@@ -22,7 +22,8 @@ header {
 }
 
 .navbar img {
-  width: 80%;
+  display: flex;
+  width: 20%;
   margin-left: -20%;
   height: 100%;
 }
