@@ -1,5 +1,212 @@
 /* generar una carpeta de estilos por cada parte del html? */
 body {
+  height: 100vh;
+  background-color:red;
+  background-size: cover;
+  background-position: center;
+}
+/* HEADER */
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+.navbar {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.navbar img {
+  width: 80%;
+  margin-left: -20%;
+  height: 100%;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .toggle_btn {
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn {
+  background-color: #feca3e;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+
+}
+
+.action_btn:hover {
+  scale: 0.8;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  
+  
+}
+
+li:hover {
+
+  color: #feca3e;
+
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+a:hover {
+
+  color: #feca3e;
+
+}
+.cuerpo {
+  background-color: #0a141d;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.carrousel {
+  display: flex;
+  height: auto;
+}
+.carrousel img {
+  margin:auto;
+  width: 33%;
+  height: 265px;
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0%;
+  width: 300px;
+  background: gainsboro;
+  backdrop-filter:blur (15px) ;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+.dropdown_menu.open {
+  height: 240px;
+}
+
+.dropdown_menu li{
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown_menu .action_btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* HERO */
+
+section#hero {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+#hero h1{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  
+}
+
+/* FOOTER */
+.pie-pagina {
+  width: 100%;
+  background-color:#15293d ;
+}
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding:45px 0px;
+}
+.pie-pagina .grupo-1 .figure{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pie-pagina img{
+  width: 120px
+}
+.pie-pagina .grupo-1 .box h2{
+  color:#ffff;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+  color:#efefef;
+  margin-bottom: 10px;
+  
+}
+.pie-pagina .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #ffff;
+  margin-right: 10px;
+  background-color: #15293d;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.pie-pagina .red-social a:hover{
+  color: red;
+}
+.pie-pagina .grupo-2 {
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #ffff;
+}
+/* FIN DEL FOOTER */
+
+
+/* ASIDE */
+aside {
     padding: 0;
     margin: 0;
     background-color: #feca3e;
@@ -200,8 +407,44 @@ body {
     background-color: #ffffff;
     bottom: 8.12em;
   }
-  @media screen and (min-width: 600px) {
+
+
+
+
+/* RESPONSIVE DESING */
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action_btn{
+    display: none;
+  }
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+  
+  .pie-pagina .grupo-1{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0px;
+    padding:35px 0px;
+    align-content: center;
+    justify-content: center
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+  
+}
+
+  /* @media screen and (min-width: 600px) {
     .container {
       font-size: 20px;
     }
-  }
+  } */

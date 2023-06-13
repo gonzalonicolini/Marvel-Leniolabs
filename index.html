@@ -1,21 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <title>Spider Labs</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spider Labs</title>
+
+  <!-- Mis estilos -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Generador de iconos -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&family=Source+Code+Pro:wght@600&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+  <!-- Libreria de iconos / cndjs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="assets/icono.ico">
+  <!-- 2da Libreria de iconos / remixcoin -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
 <body>
-    <header></header>
-    <nav></nav>
+  <!-- HEADER -->
+  <header>
+    <div class="navbar">
+        <img src="/assets/headerIcon.png" alt="logo" >
+        <!-- <div class="logo"><a href="#">SpiderLabs</a></div> -->
+        <ul class="links">
+          <li><a href="History"></a>History</li>
+          <li><a href="Super Powers"></a>Superpowers</li>
+          <li><a href="Movies"></a>Movies</li>
+          <li><a href="Comics"></a>Comics</li>
+          <li><a href="Contact"></a>Contact</li>
+        </ul>
+        <a href="#" class="action_btn">Collabs</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="dropdown_menu">
+        <li><a href="History"></a>History</li>
+        <li><a href="Super Powers"></a>Superpowers</li>
+        <li><a href="Movies"></a>Movies</li>
+        <li><a href="Comics"></a>Comics</li>
+        <li><a href="Contact"></a>Contact</li>
+        <li><a href="#" class="action_btn">Collabs</a></li>
+      </div>
+  </header>
+<!-- FIN DEL HEADER -->
+
+
+<section class="cuerpo">
+  <div class="carrousel">
+       <img src="/assets/carrousel1.jpg" alt="1">
+       <img src="/assets/carrousel2.jpg" alt="2">
+       <img src="/assets/carrousel3.jpg" alt="3">
+   </div>
+</section>
+
+
+
+    <!-- <main>
+      <section id="hero">
+        <h1>Welcome</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elimus, deseru</p>
+      </section>
+    </main> -->
+
+
+
+    <!-- JS - Mejor realizarlo en otro archivo -->
+    <script>
+      const toggleBtn = document.querySelector('.toggle_btn')
+      const toggleBtnIcon = document.querySelector('.toggle_btn i')
+      const dropDownMenu = document.querySelector('.dropdown_menu')
+
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle ('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+      }
+    </script>
+    <!-- FIN DEL HEADER -->
     <section>
         <article></article>
         <article></article>
         <article></article>
     </section>
+
+    <!-- INICIO ASIDE -->
     <aside>
         <div class="container center">
             <div class="rope center">
@@ -43,6 +124,36 @@
             </div>
           </div>
     </aside>
-    <footer></footer>
+    <!-- FIN ASIDE -->
+
+
+  <!-- FOOTER -->
+  <footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+                <a href="#">
+                    <img src="" alt="LenioLabs">
+                </a>
+            </figure>
+        </div>
+    
+        <div class="box">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veniam unde perferendis quasi itaque, quas rerum, hic temporibus dolor beatae ea perspiciatis. Vel excepturi necessitatibus nesciunt! Cumque repudiandae sequi at.</p>
+        </div>
+        <div class="box">
+            <h2>SIGUENOS</h2>
+            <div class="red-social">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook" style="font-size: 18px;"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter" style="font-size: 18px;"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" style="font-size: 18px;"></i></a>
+            </div>        
+        </div>
+    </div>    
+    <div class="grupo-2">
+        <small>&copy;2023 <b>LenioLabs</b> - Todos los Derechos Reservados.</small>
+    </div>
+</footer>
 </body>
 </html>
